@@ -2,6 +2,13 @@ require 'compass'
 require 'susy'
 
 
+activate :deploy do |deploy|
+  deploy.method = :git
+  deploy.user = "procload"
+  deploy.host = "http://www.github.com/"
+  deploy.path = "https://github.com/procload/qc-stacks"
+end
+
 
 # Methods defined in the helpers block are available in templates
 helpers do

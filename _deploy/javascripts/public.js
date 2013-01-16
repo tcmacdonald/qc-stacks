@@ -1,1 +1,0 @@
-throw Error("Sprockets::FileNotFound: couldn't find file 'bootstrap'\n  (in /Users/ryan/Sites/Personal/qcstacks/source/javascripts/public.js:4)")
