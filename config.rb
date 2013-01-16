@@ -5,8 +5,6 @@ require 'susy'
 activate :deploy do |deploy|
   deploy.method = :git
   deploy.user = "procload"
-  deploy.host = "http://www.github.com/"
-  deploy.path = "https://github.com/procload/qc-stacks"
 end
 
 
