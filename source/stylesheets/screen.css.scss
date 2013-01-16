@@ -1,0 +1,244 @@
+@import 'partials/base';
+
+
+// Global
+// --------------------------------------------------
+
+body {
+  background: $backgroundColor image-url('backgrounds/debut_light.png') repeat top left;
+  color: $textColor;
+  line-height: $baseLineHeight;
+  font-size: 100%;
+  font-family: $baseFontFamily;
+}
+
+%container {
+  @include container;
+}
+
+
+%lightened {
+  color: lighten($red, 30%);
+  &:hover,
+  &:active,
+  &:focus {
+    color: $red;
+  }
+}
+
+// Typography
+// --------------------------------------------------
+
+h1, h2, h3,
+h4, h5, h6 {
+  font-family: $headlineFontFamily;
+  font-weight: 700;
+}
+
+h1 {
+  
+}
+
+h2 {
+  
+}
+
+h3{
+
+}
+
+h4 {
+
+}
+
+h5 {
+
+}
+
+p {
+  font-weight: 500;
+  font-size: calc-em(18px);
+  margin: 0 0 .382em 0;
+}
+
+// Links
+// --------------------------------------------------
+
+a {
+  color: $linkColor;
+  text-decoration: none;
+
+  &:hover {
+    color: $linkColorHover;
+  }
+}
+
+
+// Header
+// --------------------------------------------------
+
+.site-header {
+  padding: 1em 0;
+  
+  background: $backgroundColor;
+  
+  @include box-shadow(rgba(0,0,0,.1) 0 2px 3px);
+  width: 100%;
+  position: relative;
+  z-index: 4;
+
+  @include respond-to('medium-screens') {
+    position: fixed;
+    z-index: 4;
+    border: none;
+  }
+
+  hgroup {
+    @extend %container;
+    @include respond-to('medium-screens') {
+      @extend %group;
+    }
+    
+  }
+  h1 {
+    font-size: calc-em(32px);
+    line-height: 1em;
+    margin: 0 0 .219em;
+    color: $black;
+    font-weight: 300;
+    @include background(image-url('ico-logo.png') no-repeat left);
+    padding-left: calc-em(38px, 32px);
+    
+    @include respond-to('medium-screens') {
+      float: left;
+      margin: 0;
+    }
+  }
+  h2 {
+    font-size: calc-em(16px);
+    
+    color: $grayLight;
+    font-family: $baseFontFamily;
+    font-weight: 300;
+    @include respond-to('medium-screens') {
+      line-height: 2.2em;
+      text-align: right;
+
+      float: right;
+    }
+    a {
+      display: block;
+      @extend %lightened;
+      @include respond-to('medium-screens') {
+        display: inline;
+      }
+    }
+  }
+}
+
+// Main Content
+// --------------------------------------------------
+
+.main-content {
+  @extend %container;
+  background: $white;
+  padding-bottom: 3.927em;
+  padding-top: 1em;
+  border-left: 1px solid $grayLightest;
+  border-right: 1px solid $grayLightest;
+  @include respond-to('medium-screens') {
+    padding-top: 6.354em;
+  }
+} //main-content 
+
+
+// Individual Summary
+// --------------------------------------------------
+
+.day-summary {
+  h1 {
+    font-family: $altFontFamily;
+    font-size: calc-em(16px);
+
+    color: darken($grayLight, 5%);
+    font-weight: 400;
+  }
+
+  h2 {
+    font-size: calc-em(24px);
+    line-height: 1.25;
+    margin-bottom: .219em;
+    font-weight: 600;
+  }
+
+  .summary-header {
+    margin-bottom: 1.618em;
+    h1 {
+      display: inline-block;
+      background: $backgroundColor;
+      position: relative;
+      z-index: 3;
+      padding-right: calc-em(10px, 18px);
+    }
+    &:after {
+      z-index: 2;
+      display: block;
+      content: '';
+      top: -13px;
+      position: relative;
+      background: $grayLightest;
+      height: 1px;
+      width: 100%;
+    }
+  }
+
+  .summary-body {
+    margin-bottom: 3.927em;
+
+  }
+
+  .read-more {
+  }
+
+  .summary-footer {
+    font-size: calc-em(18px);
+    color: $grayLight;
+    font-family: $altFontFamily;
+    text-align: center;
+  }
+}
+
+.important-articles {
+  .article {
+    margin-bottom: 2.618em;
+  }
+}
+
+
+// Footer
+// --------------------------------------------------
+
+.site-footer {
+  @include box-shadow(rgba(0,0,0,.1) 0 -2px 3px);
+  background: $white;
+  font-family: $altFontFamily;
+  .footer-content {
+    @extend %container;
+  }
+  .footer-links {
+    padding: 1em 0;
+    a {
+      font-weight: 300;
+      @extend %lightened;
+      font-size: calc-em(14px);
+    }
+    li {
+      display: inline-block;
+      margin-right: 1.618em;
+      &.twitter {
+        margin-right: 0;
+        float: right;
+      }
+    } //li
+  } //footer-links 
+} //site-footer

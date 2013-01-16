@@ -1,0 +1,88 @@
+// Variables & Setup
+// **************************************************
+// **************************************************
+
+// Many font-sizes and values come from: http://modularscale.com/scale/?px1=18&px2=27&ra1=1.618&ra2=0
+
+
+// Colors
+// --------------------------------------------------
+
+// Grays
+$black:                            #000;
+$gray:                             #555;
+$grayLight:                        #BEBEBE;
+$grayLightest:                     #E5E5E5;
+$grayDarkest:                      #333;
+$white:                            #fff;
+      
+// Accent colors                   
+$blue:                             #049cdb;
+$blueDark:                         #0064cd;
+$green:                            #46a546;
+$red:                              #EB184B;
+$yellow:                           #ffc40d;
+$orange:                           #f89406;
+$pink:                             #c3325f;
+$purple:                           #7a43b6;
+
+// GLOBAL VALUES
+// --------------------------------------------------
+
+// Background
+$backgroundColor:                  $white;
+
+// Links
+$linkColor:                        $red;
+$linkColorHover:                   darken($linkColor,8%);
+      
+// Typography                    
+$baseFontSize:                     16px;
+$baseFontFamily:                   "chaparral-pro", Cambria, Georgia, Times, "Times New Roman", serif;
+$headlineFontFamily:               "chaparral-pro-display", Cambria, Georgia, Times, "Times New Roman", serif;
+$altFontFamily:                    "freight-sans-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$baseLineHeight:                   1.5;
+$textColor:                        $grayDarkest;
+$headlineTextColor:                $grayDarkest;
+
+// Buttons                         
+$primaryButtonBackground:          $linkColor;
+
+//Borders
+$borderColor:                      #1a1a1a;
+
+// COMPONENT VARIABLES
+// --------------------------------------------------
+
+// Input placeholder text color
+$placeholderText:                 $gray;
+
+// HR border color
+$hrBorder:                        $gray;
+
+// SUSY GRID
+// --------------------------------------------------
+ 
+$total-columns  : 8;             // a 12-column grid
+$column-width   : 4.250em;            // each column is 4em wide
+$gutter-width   : 1.618em;            // 1em gutters between columns
+$grid-padding   : $gutter-width;  // grid-padding equal to gutters
+
+
+// Imports & Includes
+// **************************************************
+// **************************************************
+
+// My Mixins
+@import "partials/custom_mixins";
+
+//Compass Mixins
+@import "compass/css3";
+@import "compass/reset";
+
+//Susy Grid
+@import "susy";
+
+//Font Awesome
+@import "partials/font-awesome";
+
