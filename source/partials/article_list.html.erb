@@ -1,0 +1,10 @@
+<ul class="important-articles">
+  <% data.article.article.each do |article| %>
+  <li class="article">
+    <%= content_tag :h2, link_to(article.headline, article.url, target: "_blank") %>
+    <%= content_tag :p, article.summary %>
+    <%= link_to 'Read more&hellip;', article.url, class: 'read-more', target: "_blank" %>
+  </li>
+  <% end %>
+</ul>
+<!-- /important-articles -->

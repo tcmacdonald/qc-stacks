@@ -15,6 +15,7 @@ $grayLight:                        #BEBEBE;
 $grayLightest:                     #E5E5E5;
 $grayDarkest:                      #333;
 $white:                            #fff;
+$almostWhite:                      #FDFDFD;
       
 // Accent colors                   
 $blue:                             #049cdb;
@@ -30,7 +31,7 @@ $purple:                           #7a43b6;
 // --------------------------------------------------
 
 // Background
-$backgroundColor:                  $white;
+$backgroundColor:                  $almostWhite;
 
 // Links
 $linkColor:                        $red;

@@ -58,7 +58,7 @@ h5 {
 p {
   font-weight: 500;
   font-size: calc-em(18px);
-  margin: 0 0 .382em 0;
+  margin: 0 0 .764em 0;
 }
 
 // Links
@@ -82,15 +82,16 @@ a {
   
   background: $backgroundColor;
   
-  @include box-shadow(rgba(0,0,0,.1) 0 2px 3px);
   width: 100%;
   position: relative;
   z-index: 4;
+  border-bottom: 1px solid darken($backgroundColor, 10%);
+  @include box-shadow(#FFF 0 1px 0);
 
   @include respond-to('medium-screens') {
     position: fixed;
     z-index: 4;
-    border: none;
+
   }
 
   hgroup {
@@ -108,7 +109,9 @@ a {
     font-weight: 300;
     @include background(image-url('ico-logo.png') no-repeat left);
     padding-left: calc-em(38px, 32px);
-    
+    a {
+      color: $black;
+    }
     @include respond-to('medium-screens') {
       float: left;
       margin: 0;
@@ -139,9 +142,36 @@ a {
 // Main Content
 // --------------------------------------------------
 
+.sign-up-form {
+  position: relative;
+  width: 100%;
+  background: #F9F9F9;
+  height: 60px;
+  padding: 10px 0;
+  top: 70px;
+  border-bottom: 1px solid darken(#F9F9F9, 10%);
+  @include box-shadow(rgba(0,0,0,.04) 0 2px 3px);
+  form {
+    @extend %container;
+    label,
+    input {
+      display: inline-block;
+    }
+    input[type="email"] {
+      background: $white;
+      font-family: $altFontFamily;
+      border: 1px solid darken(#F9F9F9, 10%);
+      font-size: 16px;
+      height: 32px;
+      width: calc-em(200px);
+      color: darken(#F9F9F9, 30%);
+    }
+  }
+}
+
 .main-content {
   @extend %container;
-  background: $white;
+  background: $backgroundColor;
   padding-bottom: 3.927em;
   padding-top: 1em;
   border-left: 1px solid $grayLightest;
@@ -214,13 +244,34 @@ a {
   }
 }
 
+// About Page
+// --------------------------------------------------
+
+
+.about {
+  .main-content {
+    h1 {
+      font-size: calc-em(24px);
+      line-height: 1.25;
+      margin-bottom: .219em;
+      font-weight: 600;
+      color: $red;
+    }
+  }
+  
+
+}
+
+
 
 // Footer
 // --------------------------------------------------
 
 .site-footer {
+  border-bottom: 1px solid darken($backgroundColor, 10%);
+  @include box-shadow(#FFF 0 1px 0);
   @include box-shadow(rgba(0,0,0,.1) 0 -2px 3px);
-  background: $white;
+  background: $backgroundColor;
   font-family: $altFontFamily;
   .footer-content {
     @extend %container;

@@ -1,13 +1,13 @@
-
+<% wrap_layout :public do %>
 <article class="day-summary">
   <header class="summary-header">
-    <h1><%= blog.articles.first.date.strftime("%A, %B %e %Y") %></h1>
+    <h1><%= current_article.date.strftime("%A, %B %e %Y") %></h1>
   </header>
   <!-- /summary-header -->
 
   <div class="summary-body">
     <ul class="important-articles">
-      <%= blog.articles.first.body %>
+      <%= yield %>
     </ul>
   <!-- /important-articles -->
   </div>
@@ -20,3 +20,4 @@
 
 </article>
 <!-- /day-summary -->
+<% end %>

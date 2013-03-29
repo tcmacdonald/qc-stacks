@@ -14,6 +14,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
   <%= stylesheet_link_tag "screen" %>
+  
   <%= javascript_include_tag "public" %>
   <script type="text/javascript" src="//use.typekit.net/mkx8ilk.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
@@ -23,20 +24,20 @@
 
 <header id="site-header" class="site-header">
   <hgroup>
-    <h1>Queen City Stacks</h1>
+    <h1><%= link_to 'Queen City Stacks', '/' %></h1>
     <h2>The five-best Cincinnati stories, every day. <%= link_to 'Get it by email.' %></h2>
   </hgroup>
+  
 </header><!-- site-header -->
-
 <div class="main-content">
-    <%= yield %>
+  <%= yield %>
 </div><!-- /main-content -->
 
 <footer class="site-footer" id="signup">
   <div class="footer-content">
     <ul class="footer-links">
-      <li><%= link_to 'Archive', '#' %></li>
-      <li><%= link_to 'About', '#' %></li>
+      <li><%= link_to 'Archive', '/archive' %></li>
+      <li><%= link_to 'About', '/about' %></li>
       <li><%= link_to 'Sign-up', '#' %></li>
       <li class="twitter"><%= link_to '<i class="icon-twitter"></i>', '#' %></li>
     </ul>
