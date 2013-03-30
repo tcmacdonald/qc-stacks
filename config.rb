@@ -44,6 +44,10 @@ helpers do
       start_year.to_s + '-' + end_year.to_s
     end
   end
+
+  def todays_articles
+    @todays_articles ||= blog.articles.collect{ |a| a if a.date == Date.today }.compact
+  end
 end
 
 
