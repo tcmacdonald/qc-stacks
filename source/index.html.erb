@@ -7,7 +7,13 @@
 
   <div class="summary-body">
     <ul class="important-articles">
-      <%= blog.articles.first.body %>
+    <% todays_articles.each do |article| %>
+      <li class="article">
+        <h2><%= link_to article.title, article.data.try(:[], :url), target: '_blank' %></h2>
+        <p><%= article.body %></p>
+        <%= link_to 'Read more &hellip;', article.data.try(:[], :url), class: 'read-more', target: '_blank' %>
+      </li>
+    <% end %>
     </ul>
   <!-- /important-articles -->
   </div>
