@@ -1,0 +1,10 @@
+- if @success
+  %p Thanks for signing up!
+- elsif defined? @message
+  %p= @message
+
+= haml(:'partials/form')
+
+%ol
+  - current_subscribers.each do |s|
+    %li= "#{s.name} #{s.email}"

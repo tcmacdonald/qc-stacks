@@ -13,6 +13,7 @@ GEM
     bacon (1.2.0)
     daemons (1.1.9)
     eventmachine (1.0.3)
+    haml (3.1.7)
     rack (1.5.2)
     rack-protection (1.5.0)
       rack
@@ -34,6 +35,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  haml
   sequel
   shotgun
   sinatra!
